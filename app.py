@@ -3,16 +3,12 @@ import datetime
 from json_output import json_output_with_requests, json_output_with_urllib
 from big_block import *
 
-url = "https://api.covid19api.com/summary"
+url = "http://api.covid19api.com/summary"
 
 json_file = open('saved.json','w')
 
-
-
-
-
 try:
-    print('Sending request with Requeests.')
+    print('Sending request with Requests.')
     loaded_jsn = json_output_with_requests(url)
     print('Request successful')
     
@@ -55,8 +51,6 @@ while wants is 1:
             details_block(countries)
             one_block()
             four_lines()
-
-
 
 json_file.close()
 
